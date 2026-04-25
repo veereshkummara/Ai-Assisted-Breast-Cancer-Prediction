@@ -1,0 +1,15 @@
+# 1. Setup environment
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+
+# 2. Download BUSI dataset → place in data/BUS_dataset/
+
+# 3. Sanity check model
+python models/vit_unet.py
+
+# 4. Train (GPU recommended; ~3hrs on RTX 3080)
+python training/train.py
+
+# 5. Launch app
+streamlit run app.py
+# Opens at http://localhost:8501
