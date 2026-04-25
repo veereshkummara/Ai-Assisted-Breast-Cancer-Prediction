@@ -1,0 +1,16 @@
+breast_cancer_ai/
+├── app.py                  ← Streamlit UI (997 lines, premium dark theme)
+├── config.py               ← All hyperparameters in one place
+├── requirements.txt
+├── models/
+│   └── vit_unet.py         ← Full ViT-Base/16 encoder + U-Net decoder
+├── explainability/
+│   ├── gradcam.py          ← Grad-CAM & Grad-CAM++ with hooks
+│   └── attention_maps.py   ← Rollout, raw attention, per-head maps
+├── utils/
+│   ├── metrics.py          ← Dice, IoU, Precision, Recall, AUC, Hausdorff
+│   ├── preprocessing.py    ← CLAHE, albumentations, tensor utils
+│   └── visualization.py    ← Heatmap overlays, mask rendering
+└── training/
+    ├── dataset.py          ← BUSI Dataset + DataLoader factory
+    └── train.py            ← Full training loop with early stopping
